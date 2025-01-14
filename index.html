@@ -7,14 +7,27 @@
     <title>Pack Premium de Temas</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(135deg, #1a1c2d 0%, #2d1a4a 100%);
+            color: #ffffff;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(26, 28, 45, 0.9), rgba(45, 26, 74, 0.9));
+            padding: 2rem 0;
+        }
+    </style>
 </head>
 
 <body>
     <header class="hero">
         <div class="container">
             <h1>Pack Premium de Temas</h1>
+            <h2>Todos os temas são 100% editáveis na Shopify</h2>
             <div class="laptop-showcase">
-                <img src="img01.webp" alt="Demonstração do produto">
+                <img src="/img/banner.webp" alt="Demonstração do produto">
             </div>
 
             <div class="price-tag">
@@ -56,10 +69,10 @@
     <section class="themes-counter">
         <div class="container">
             <div class="counter-content">
-                <h2>+600</h2>
-                <p>Temas 100% editáveis na Shopify e no WordPress</p>
-                <img src="lojadrop.png.webp" alt="Demonstração do produto">
+                <h2>10 TEMPLATES</h2>
+                <p>Todos os temas são 100% editáveis na Shopify</p>
             </div>
+            <img src="img/image12.webp" alt="Demonstração do produto">
         </div>
     </section>
 
@@ -94,33 +107,11 @@
                 <button class="carousel-button prev">
                     <i class="fas fa-chevron-left"></i>
                 </button>
-
                 <div class="carousel">
                     <div class="carousel-track">
-                        <div class="carousel-slide">
-                            <img src="template1.webp" alt="Template Shopify 1">
-                            <div class="template-info">
-                                <h3>Template Moda</h3>
-                                <p>Perfeito para lojas de roupas</p>
-                            </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="template2.webp" alt="Template Shopify 2">
-                            <div class="template-info">
-                                <h3>Template Eletrônicos</h3>
-                                <p>Ideal para produtos tech</p>
-                            </div>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="template3.webp" alt="Template Shopify 3">
-                            <div class="template-info">
-                                <h3>Template Beleza</h3>
-                                <p>Perfeito para cosméticos</p>
-                            </div>
-                        </div>
+                        <!-- Os slides serão inseridos via JavaScript -->
                     </div>
                 </div>
-
                 <button class="carousel-button next">
                     <i class="fas fa-chevron-right"></i>
                 </button>
@@ -129,6 +120,7 @@
         </div>
     </section>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
