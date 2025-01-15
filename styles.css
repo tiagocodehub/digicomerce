@@ -16,22 +16,76 @@ body {
     color: #ffffff;
 }
 
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+
 .hero {
     padding-top: 50px;
 }
 
-.glass-effect {
-    background: rgba(255, 255, 255, 0.15); /* Fundo translúcido */
-    border-radius: 10px; /* Cantos arredondados */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Borda sutil */
-    backdrop-filter: blur(10px); /* Desfoque do fundo */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação */
+.accordion {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    width: 90%;
+    margin-bottom: 60px;
 }
 
-.glass-effect:hover {
-    transform: translateY(-5px); /* Leve elevação ao passar o mouse */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Aumenta a sombra */
+.accordion-item {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    background-color: #ffffff;
+    border: none;
+    color: #343a40;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #e9ecef;
+    color: #000;
+    transform: scale(1.02);
+}
+
+.accordion-body {
+    background-color: #ffffff;
+    color: #495057;
+    padding: 20px;
+    border-top: 1px solid #dee2e6;
+}
+
+.garantia {
+    margin-top: 100px;
+}
+
+.garantia img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.faixa-atencao {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-color); /* Cor de fundo chamativa */
+    color: var(--text-color); /* Cor do texto */
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+    z-index: 1050; /* Para ficar acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
 }
 
 
@@ -39,34 +93,45 @@ body {
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
     #carouselExampleSlidesOnly {
-        max-width: 600px;    
-    }; 
+        max-width: 600px; 
+    }
+    
 };
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     #carouselExampleSlidesOnly {
         max-width: 600px;    
-    }; 
-};
+    }
+    .accordion {
+        width: 60%;
+    }
+}
+
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
     #carouselExampleSlidesOnly {
         max-width: 600px;    
-    };
+    }
+    .accordion {
+        width: 70%;
+    }
 };
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
     #carouselExampleSlidesOnly {
-        max-width: 70%; 
-    };
+        max-width: 600px; 
+    }
+    .accordion {
+        width: 80%;
+    }
 };
 
     /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) { 
     #carouselExampleSlidesOnly {
-        max-width: 70%; 
+        max-width: 600px; 
     };
 };
