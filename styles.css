@@ -13,10 +13,6 @@
     box-sizing: border-box;
 }
 
-.no-click {
-    pointer-events: none;
-}
-
 body {
     background: linear-gradient(135deg, #1a1c2d 0%, #2d1a4a 100%);
     color: #ffffff;
