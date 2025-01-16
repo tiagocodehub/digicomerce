@@ -3,6 +3,8 @@
     --secondary-color: #1a1a1a;
     --text-color: #ffffff;
     --accent-color: #ff4081;
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --shadow-color: rgba(31, 38, 135, 0.37);
 }
 
 * {
@@ -11,17 +13,20 @@
     box-sizing: border-box;
 }
 
+.no-click {
+    pointer-events: none;
+}
+
 body {
     background: linear-gradient(135deg, #1a1c2d 0%, #2d1a4a 100%);
     color: #ffffff;
 }
 
 .glass-effect {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--card-bg);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border: 1px solid var(--card-bg);
+    box-shadow: 0 8px 32px 0 var(--shadow-color);
 }
 
 
@@ -79,30 +84,38 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: var(--secondary-color); /* Cor de fundo chamativa */
-    color: var(--text-color); /* Cor do texto */
+    background-color: var(--secondary-color);
+    /* Cor de fundo chamativa */
+    color: var(--text-color);
+    /* Cor do texto */
     text-align: center;
     padding: 10px 0;
     font-weight: bold;
-    z-index: 1050; /* Para ficar acima de outros elementos */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    z-index: 1050;
+    /* Para ficar acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Sombra para destaque */
 }
 
 
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
+@media (min-width: 576px) {
     #carouselExampleSlidesOnly {
-        max-width: 600px; 
+        max-width: 600px;
     }
-    
-};
+
+    .accordion {
+        width: 70%;
+    }
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     #carouselExampleSlidesOnly {
-        max-width: 600px;    
+        max-width: 600px;
     }
+
     .accordion {
         width: 60%;
     }
@@ -110,28 +123,45 @@ body {
 
 
 /* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) { 
+@media (min-width: 992px) {
     #carouselExampleSlidesOnly {
-        max-width: 600px;    
+        max-width: 600px;
     }
+
     .accordion {
         width: 70%;
     }
-};
+}
+
+;
 
 /* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
     #carouselExampleSlidesOnly {
-        max-width: 600px; 
+        max-width: 600px;
     }
+
     .accordion {
         width: 80%;
     }
-};
+}
 
-    /* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) { 
+;
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
     #carouselExampleSlidesOnly {
-        max-width: 600px; 
-    };
-};
+        max-width: 600px;
+    }
+
+    ;
+}
+
+;
+
+/* Adicione prefers-reduced-motion para acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+    .accordion-button {
+        transition: none;
+    }
+}
